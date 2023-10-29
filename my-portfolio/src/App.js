@@ -1,7 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import MyWork from "./pages/MyWork";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
