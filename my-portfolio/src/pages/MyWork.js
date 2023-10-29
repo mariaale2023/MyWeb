@@ -1,5 +1,5 @@
-const MuWotk = () => {
+const MyWork = () => {
   return <></>;
 };
 
-export default MuWotk;
+export default MyWork;
