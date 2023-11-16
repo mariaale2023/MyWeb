@@ -1,7 +1,23 @@
-import React from "react";
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+
+{
+  /* <div className="absolute top-28 left-0 right-0 z-10 flex justify-center items-center">
+        POP UP
+      </div> */
+}
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <section className="w-full h-screen relative">
+      <Canvas
+        className="w-full h-screen bg-transparent"
+        camera={{ near: 0.1, far: 1000 }}
+      >
+        <Suspense></Suspense>
+      </Canvas>
+    </section>
+  );
 };
 
 export default Home;
