@@ -17,6 +17,7 @@ import { a } from "@react-spring/three";
 import islandScene from "../assets/3d/island.glb";
 
 const Island = (props) => {
+  // useGLTF is used to load the 3D model from the specified GLB file
   const { nodes, materials } = useGLTF(islandScene);
   return (
     <a.group {...props} dispose={null}>
