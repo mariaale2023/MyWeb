@@ -21,6 +21,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
   const islandRef = useRef();
 
   const { gl, viewport } = useThree();
+  const { nodes, materials } = useGLTF(islandScene);
 
   const lastX = useRef(0);
   const rotationSpeed = useRef(0);
@@ -36,6 +37,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
 
     lastX.current = clientX;
   };
+
   const handlePointerUp = (e) => {
     e.stopPropagantion();
     e.preventDefault();
@@ -51,6 +53,19 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
 
     rotationSpeed.current = delta * 0.01 * Math.PI;
   };
+  const handleKeyDown = (e) => {
+    if (e.key === "ArrowLeft") {
+      if (!isRotating) setIsRotating(true);
+      islandRef.current.rotation.y += 0.01 * Math.PI;
+    } else if (e.key === "ArrowRight") {
+      if (!isRotating) setIsRotating(true);
+      islandRef.current.rotation.y -= 0.01 * Math.PI;
+    }
+  };
+  const handleKeyUp = (e) => {
+    if (e.key === "ArrowLeft" || e.key === "ArrowRight") setIsRotating(false);
+  };
+
   const handlePointerMove = (e) => {
     e.stopPropagantion();
     e.preventDefault();
@@ -60,11 +75,57 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
     }
   };
 
+  useFrame(() => {
+    if (!isRotating) {
+      rotationSpeed.current *= dampingFactor;
+      if (Math.abs(rotationSpeed.current) < 0.001) {
+        rotationSpeed.current = 0;
+      } else {
+        const rotation = islandRef.current.rotation.y;
+
+        //  to normalized the rotation values to snsure it stay within the range [0.2 * Math.PI]
+        const normalizedRotation =
+          ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+
+        switch (true) {
+          case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
+            setCurrentStage(4);
+            break;
+          case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
+            setCurrentStage(3);
+            break;
+          case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+            setCurrentStage(2);
+            break;
+          case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
+            setCurrentStage(1);
+            break;
+          default:
+            setCurrentStage(null);
+        }
+      }
+    }
+  });
+
   useEffect(() => {
-    document.rom;
+    const canvas = gl.domElement;
+    canvas.addEventListener("pointerdown", handlePointerDown);
+    canvas.addEventListener("pointermove", handlePointerMove);
+    canvas.addEventListener("pointerup", handlePointerUp);
+    document.addEventListener("keydown", handleKeyUp);
+    document.addEventListener("keyup", handleKeyDown);
+
+    return () => {
+      canvas.removeEventListener("pointerdown", handlePointerDown);
+      canvas.removeEventListener("pointerup", handlePointerUp);
+      canvas.removeEventListener("pointermove", handlePointerMove);
+      document.removeEventListener("keydown", handleKeyUp);
+      document.removeEventListener("keyup", handleKeyDown);
+    };
   }, [gl, handlePointerDown, handlePointerMove, handlePointerUp]);
+
   // useGLTF is used to load the 3D model from the specified GLB file
-  const { nodes, materials } = useGLTF(islandScene);
+
   return (
     <a.group {...props} ref={islandRef}>
       {/* <a.group {...props} dispose={null}> */}
@@ -99,5 +160,4 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
     </a.group>
   );
 };
-
 export default Island;
