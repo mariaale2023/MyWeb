@@ -16,11 +16,13 @@ import { a } from "@react-spring/three";
 
 import islandScene from "../assets/3d/island.glb";
 
-const Island = (props) => {
+const Island = ({ isRotating, setIsRotating, ...props }) => {
+  const islandRef = useRef();
   // useGLTF is used to load the 3D model from the specified GLB file
   const { nodes, materials } = useGLTF(islandScene);
   return (
-    <a.group {...props} dispose={null}>
+    <a.group {...props} ref={islandRef}>
+      {/* <a.group {...props} dispose={null}> */}
       <mesh
         geometry={nodes.polySurface944_tree_body_0.geometry}
         material={materials.PaletteMaterial001}
