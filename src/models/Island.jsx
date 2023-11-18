@@ -28,8 +28,9 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
   // how much is continue moving after the start rotationg the island
   const dampingFactor = 0.95;
 
+  // To start the rotation
   const handlePointerDown = (e) => {
-    e.stopPropagantion();
+    e.stopPropagation();
     e.preventDefault();
     setIsRotating(true);
 
@@ -38,20 +39,11 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
     lastX.current = clientX;
   };
 
+  //To stop the rotation
   const handlePointerUp = (e) => {
-    e.stopPropagantion();
+    e.stopPropagation();
     e.preventDefault();
     setIsRotating(false);
-
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-
-    const delta = (clientX - lastX.current) / viewport.width;
-
-    islandRef.current.rotation.y += delta * 0.01 * Math.PI;
-
-    lastX.current = clientX;
-
-    rotationSpeed.current = delta * 0.01 * Math.PI;
   };
   const handleKeyDown = (e) => {
     if (e.key === "ArrowLeft") {
@@ -67,14 +59,23 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
   };
 
   const handlePointerMove = (e) => {
-    e.stopPropagantion();
+    e.stopPropagation();
     e.preventDefault();
 
     if (isRotating) {
-      handlePointerUp(e);
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+
+      const delta = (clientX - lastX.current) / viewport.width;
+
+      islandRef.current.rotation.y += delta * 0.01 * Math.PI;
+
+      lastX.current = clientX;
+
+      rotationSpeed.current = delta * 0.01 * Math.PI;
     }
   };
 
+  // updating the rotation of the 3D island when it is not actively being rotated by user input
   useFrame(() => {
     if (!isRotating) {
       rotationSpeed.current *= dampingFactor;
