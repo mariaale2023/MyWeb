@@ -2,6 +2,8 @@ import { useGLTF } from "@react-three/drei";
 import React from "react";
 
 import skyScene from "../assets/3d/sky.glb";
+// import skyScene from "../assets/3d/sky_pano_-_milkyway.glb";
+// import skyScene from "../assets/3d/fantasy_sky_background.glb";
 
 const Sky = () => {
   // useGLTF is used to load the 3D model from the specified GLB file

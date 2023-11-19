@@ -1,10 +1,29 @@
-import React from "react";
+import { useRef, useEffect } from "react";
+import { useAnimations, useGLTF } from "@react-three/drei";
 
 import planeScene from "../assets/3d/plane.glb";
-import { useGLTF } from "@react-three/drei";
+// import planeScene from "../assets/3d/cute_narwhal.glb";
 
-const Plane = (rotation, planePosition, planeScale, isRotating) => {
-  const { scene, animation } = useGLTF(planeScene);
+const Plane = (isRotating, scale, rotation, planePosition, planeScale) => {
+  const ref = useRef();
+  const { scene, animations } = useGLTF(planeScene);
+  const { actions } = useAnimations(animations, ref);
+
+  useEffect(() => {
+    if (isRotating) {
+      actions["Take 001"].play();
+    } else {
+      actions["Take 001"].stop();
+    }
+  }, [actions, isRotating]);
+
+  // useEffect(() => {
+  //   if (isRotating) {
+  //     actions["ArmatureAction.002"].play();
+  //   } else {
+  //     actions["ArmatureAction.002"].stop();
+  //   }
+  // }, [actions, isRotating]);
 
   return (
     // <mesh position={[0, -1.2, 0]} scale={[2, 2, 2]} rotation={[0, 1.5, 0.1]}> */}
@@ -14,6 +33,8 @@ const Plane = (rotation, planePosition, planeScale, isRotating) => {
       planePosition={planePosition}
       planeScale={planeScale}
       isRotating={isRotating}
+      // scale={[0.3, 0.3, 0.3]}
+      ref={ref}
     >
       <primitive object={scene} />
     </mesh>
