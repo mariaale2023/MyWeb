@@ -5,9 +5,9 @@ import planeScene from "../assets/3d/plane.glb";
 // import planeScene from "../assets/3d/cute_narwhal.glb";
 
 const Plane = (isRotating, scale, rotation, planePosition, planeScale) => {
-  const ref = useRef();
+  const planeRef = useRef();
   const { scene, animations } = useGLTF(planeScene);
-  const { actions } = useAnimations(animations, ref);
+  const { actions } = useAnimations(animations, planeRef);
 
   useEffect(() => {
     if (isRotating) {
@@ -34,7 +34,7 @@ const Plane = (isRotating, scale, rotation, planePosition, planeScale) => {
       planeScale={planeScale}
       isRotating={isRotating}
       // scale={[0.3, 0.3, 0.3]}
-      ref={ref}
+      ref={planeRef}
     >
       <primitive object={scene} />
     </mesh>
