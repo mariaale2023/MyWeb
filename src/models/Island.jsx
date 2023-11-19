@@ -15,6 +15,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { a } from "@react-spring/three";
 
 import islandScene from "../assets/3d/island.glb";
+// import islandScene from "../assets/3d/3d_low_poly_island.glb";
 
 const Island = ({ isRotating, setIsRotating, ...props }) => {
   // seRef is a React Hook that provides a way to create a mutable object that persists throughout the lifecycle of a component. manipulate properties of the 3D object represented by the Island component.
@@ -81,29 +82,30 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
       rotationSpeed.current *= dampingFactor;
       if (Math.abs(rotationSpeed.current) < 0.001) {
         rotationSpeed.current = 0;
-      } else {
-        const rotation = islandRef.current.rotation.y;
+      }
+      islandRef.current.rotation.y += rotationSpeed.current;
+    } else {
+      const rotation = islandRef.current.rotation.y;
 
-        //  to normalized the rotation values to snsure it stay within the range [0.2 * Math.PI]
-        const normalizedRotation =
-          ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+      //  to normalized the rotation values to snsure it stay within the range [0.2 * Math.PI]
+      const normalizedRotation =
+        ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
-        switch (true) {
-          case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-            setCurrentStage(4);
-            break;
-          case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
-            setCurrentStage(3);
-            break;
-          case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
-            setCurrentStage(2);
-            break;
-          case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
-            setCurrentStage(1);
-            break;
-          default:
-            setCurrentStage(null);
-        }
+      switch (true) {
+        case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
+          setCurrentStage(4);
+          break;
+        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
+          setCurrentStage(3);
+          break;
+        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+          setCurrentStage(2);
+          break;
+        case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
+          setCurrentStage(1);
+          break;
+        default:
+          setCurrentStage(null);
       }
     }
   });
@@ -158,6 +160,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         geometry={nodes.pCube11_rocks1_0.geometry}
         material={materials.PaletteMaterial001}
       />
+      {/* ------------------ */}
     </a.group>
   );
 };
