@@ -96,7 +96,7 @@ const Home = () => {
             rotation={[0, 20, 0]}
             // scale={[1, 1, 1]}
           />
-          <Sky />
+          <Sky isRotating={isRotating} />
         </Suspense>
       </Canvas>
     </section>
