@@ -8,6 +8,7 @@ import { skills } from "../constants";
 import { experiences } from "../constants";
 import mariaImage from "../assets/projects/maria_photo2.png";
 import "./About.css"; // Import the CSS file
+import { Backdrop } from "@react-three/drei";
 
 const ExperienceTimeline = () => {
   return (
@@ -23,6 +24,7 @@ const ExperienceTimeline = () => {
             borderBottomColor: experience.iconBg,
             boxShadow: "none",
           }}
+          iconStyle={{ background: experience.iconBg }}
           icon={
             <div className="flex justify-center items-center w-full h-full">
               <img
@@ -66,7 +68,7 @@ const About = () => {
       <div className="grid-container1">
         <div className="text-container">
           <h1 className="head-text">
-            Hello, I am
+            Hello, I am{" "}
             <span className="blue-gradient_text font-semibold drop-shadow">
               MARIA
             </span>

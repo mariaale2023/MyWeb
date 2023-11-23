@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, shopify, tef, starbucks, tesla } from "../assets/images";
 
 import {
   car,
@@ -123,7 +123,7 @@ export const experiences = [
     title: "Project Coordinator ",
     company_name: "National Bank of Chile ",
     icon: shopify,
-    iconBg: "#accbe1",
+    iconBg: "#b7e4c7",
     date: "2011 - 2013",
     points: [
       "Lead limited scope projects using  Agile principles with strict timeframes and budget, particularly in commercial platform triggered by legislation changes or commercial requests like modifications and data capture requirements.",
@@ -133,7 +133,7 @@ export const experiences = [
     id: "3",
     title: "B2B Sales Digital Services",
     company_name: "Telefonica Company",
-    icon: tesla,
+    icon: tef,
     iconBg: "#fbc3bc",
     date: "2013 - 2016",
     points: [
@@ -144,7 +144,7 @@ export const experiences = [
     id: "4",
     title: "Senior IT Sales",
     company_name: "Telefonica Company",
-    icon: tesla,
+    icon: tef,
     iconBg: "#b7e4c7",
     date: "2016 -  2018",
     points: [
