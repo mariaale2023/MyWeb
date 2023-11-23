@@ -8,7 +8,8 @@ import { skills } from "../constants";
 import { experiences } from "../constants";
 import mariaImage from "../assets/projects/maria_photo2.png";
 import "./About.css"; // Import the CSS file
-import { Backdrop } from "@react-three/drei";
+// import { Backdrop } from "@react-three/drei";
+import CTA from "../components/CTA";
 
 const ExperienceTimeline = () => {
   return (
@@ -130,6 +131,8 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <CTA />
     </section>
   );
 };
