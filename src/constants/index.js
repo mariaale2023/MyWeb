@@ -1,5 +1,8 @@
-import { meta, shopify, tef, starbucks, tesla } from "../assets/images";
-
+import { meta, shopify, starbucks, tesla } from "../assets/images";
+import tef from "../assets/images/tef.png";
+import nzbike from "../assets/images/NZBike_logo.png";
+import bank from "../assets/images/Logo_BancoEstado.png";
+import university from "../assets/images/university_chile.png";
 import {
   car,
   contact,
@@ -110,7 +113,7 @@ export const experiences = [
     id: "1",
     title: "Project Coordinator (Network PILA project)  ",
     company_name: "Intellectual Property Department at University of Chile ",
-    icon: shopify,
+    icon: university,
     iconBg: "#accbe1",
     date: "2010 - 2011",
     points: [
@@ -122,7 +125,7 @@ export const experiences = [
     id: "2",
     title: "Project Coordinator ",
     company_name: "National Bank of Chile ",
-    icon: shopify,
+    icon: bank,
     iconBg: "#b7e4c7",
     date: "2011 - 2013",
     points: [
@@ -155,7 +158,7 @@ export const experiences = [
     id: "5",
     title: "Shopify Developer and MKT Lead",
     company_name: "NZBike.co.nz",
-    icon: shopify,
+    icon: nzbike,
     iconBg: "#a2d2ff",
     date: "Ago 2023 - Present",
     points: [
