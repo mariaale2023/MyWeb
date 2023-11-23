@@ -66,10 +66,7 @@ const About = () => {
       <div className="grid-container1">
         <div className="text-container">
           <h1 className="head-text">
-            Hello, I'am{" "}
-            {/* <h2 class="text-8xl font-extrabold text-transparent  bg-clip-text bg-gradient-to-r  from-purple-400 to-pink-600">
-        Tailwind CSS
-      </h2> */}
+            Hello, I am
             <span className="blue-gradient_text font-semibold drop-shadow">
               MARIA
             </span>
