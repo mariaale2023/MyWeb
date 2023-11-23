@@ -30,10 +30,10 @@ const Home = () => {
 
     if (window.innerWidth < 768) {
       screenScale = [1.5, 1.5, 1.5];
-      screenPosition = [0, -1.5, 0];
+      screenPosition = [0, -1, 0];
     } else {
       screenScale = [3, 3, 3];
-      screenPosition = [0, -4, -4];
+      screenPosition = [0, -2, -3];
     }
 
     // if (window.innerWidth < 768) {
@@ -88,9 +88,9 @@ const Home = () => {
             // isSetRotating={isSetRotating}
           />
           <Plane
-            planePosition={planePosition}
-            planeScale={planeScale}
             isRotating={isRotating}
+            position={planePosition}
+            scale={planeScale}
             rotation={[0, 20, 0]}
             // scale={[1, 1, 1]}
           />
