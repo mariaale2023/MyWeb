@@ -1,4 +1,5 @@
 import React from "react";
+import { skills } from "../constants";
 
 const About = () => {
   return (
@@ -33,9 +34,34 @@ const About = () => {
           Let's collaborate and bring your projects to life!
         </p>
       </div>
-      <div className="py-10 flex flex-col">
+      <div className=" my-skills py-10 flex flex-col">
         <h2 className="subhead-text">My Skills</h2>
-        <div className="mt-16 flex flex-wrap gap-12"></div>
+        <div className="mt-16 flex flex-wrap gap-12">
+          {skills.map((skill) => (
+            <div className="block-container w-20 h-20">
+              <div className="btn-back rounded-xl" />
+              <div className=" btn-front rounded-xl flex justify-center items-center">
+                <img
+                  src={skill.imageUrl}
+                  alt={skill.name}
+                  className="w-1/2 h-1/2 object-contain "
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="work-experience py-16">
+        <h3>Work Experience</h3>
+        <div className="mt-5 flex flex-col gap-3 text-slate-500">
+          <p>
+            As a passionate Front-end Developer originally from Chile and
+            currently based in the beautiful landscapes of New Zealand, I bring
+            over 8 years of expertise in business and project management to the
+            world of web development.
+          </p>
+        </div>
       </div>
     </section>
   );
