@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -10,24 +10,49 @@ const Contact = () => {
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
-  const handleFocus = (e) => {};
+  const handleFocus = () => {};
   const handleBlur = () => {};
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
 
-    emailjs.sendForm(
-      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-      {
-        from_name: form.name,
-        to_name: "Maria",
-        from_email: form.email,
-        to_email: "info@hellomaria.dev",
-        message: form.message,
-      },
-      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-    );
+    /*emailjs.send('<YOUR_SERVICE_ID>','<YOUR_TEMPLATE_ID>', templateParams, '<YOUR_PUBLIC_KEY>')
+ 	    .then((response) => {
+     console.log('SUCCESS!', response.status, response.text);
+      }, (err) => {
+     console.log('FAILED...', err);
+    }); */
+
+    // console.log(import.meta.env.VITE_APP_EMAILJS_SERVICE_ID);
+    // console.log(import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID);
+    // console.log(import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY);
+    // console.log("Form Values:", form);
+    emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          to_name: "Maria",
+          from_email: form.email,
+          to_email: "info@hellomaria.dev",
+          message: form.message,
+        },
+
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setIsLoading(false);
+
+        // TODO: Show success message
+        // TODO: Hide an alert
+        setForm({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        console.log(error);
+        // TODO: Show success message
+      });
   };
 
   return (
@@ -46,7 +71,7 @@ const Contact = () => {
               name="name"
               className="input"
               placeholder="Maria"
-              requiered
+              required
               value={form.name}
               onChange={handleChange}
               onFocus={handleFocus}
@@ -60,7 +85,7 @@ const Contact = () => {
               name="email"
               className="input"
               placeholder="info@hellomaria.dev"
-              requiered
+              required
               value={form.email}
               onChange={handleChange}
               onFocus={handleFocus}
@@ -75,7 +100,7 @@ const Contact = () => {
               name="message"
               className="input"
               placeholder="How I can help you?"
-              requiered
+              required
               value={form.message}
               onChange={handleChange}
               onFocus={handleFocus}
