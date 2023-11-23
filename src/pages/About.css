@@ -1,0 +1,22 @@
+/* About.css */
+
+/* For large screens (lg) and above */
+@media (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 16px; /* Adjust the gap according to your design */
+  }
+}
+
+/* For screens smaller than large (sm, md) */
+@media (max-width: 1023px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-container {
+    margin-top: 16px; /* Adjust the margin according to your design */
+  }
+}

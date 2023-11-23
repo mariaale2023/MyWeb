@@ -1,4 +1,5 @@
 import { meta, shopify, starbucks, tesla } from "../assets/images";
+
 import {
   car,
   contact,
@@ -106,9 +107,10 @@ export const skills = [
 
 export const experiences = [
   {
+    id: "1",
     title: "Project Coordinator (Network PILA project)  ",
     company_name: "Intellectual Property Department at University of Chile ",
-    icon: bank,
+    icon: shopify,
     iconBg: "#accbe1",
     date: "2010 - 2011",
     points: [
@@ -117,9 +119,10 @@ export const experiences = [
     ],
   },
   {
+    id: "2",
     title: "Project Coordinator ",
     company_name: "National Bank of Chile ",
-    icon: bank,
+    icon: shopify,
     iconBg: "#accbe1",
     date: "2011 - 2013",
     points: [
@@ -127,9 +130,10 @@ export const experiences = [
     ],
   },
   {
+    id: "3",
     title: "B2B Sales Digital Services",
     company_name: "Telefonica Company",
-    icon: telefonica,
+    icon: tesla,
     iconBg: "#fbc3bc",
     date: "2013 - 2016",
     points: [
@@ -137,9 +141,10 @@ export const experiences = [
     ],
   },
   {
+    id: "4",
     title: "Senior IT Sales",
     company_name: "Telefonica Company",
-    icon: telefonica,
+    icon: tesla,
     iconBg: "#b7e4c7",
     date: "2016 -  2018",
     points: [
@@ -147,6 +152,7 @@ export const experiences = [
     ],
   },
   {
+    id: "5",
     title: "Shopify Developer and MKT Lead",
     company_name: "NZBike.co.nz",
     icon: shopify,
@@ -182,6 +188,7 @@ export const socialLinks = [
 export const projects = [
   {
     iconUrl: shopify,
+    // imgURL: nzbike,
     theme: "btn-back-red",
     name: "NZBike Store",
     description:
@@ -190,6 +197,7 @@ export const projects = [
   },
   {
     iconUrl: threads,
+    // imgURL: nzbike,
     theme: "btn-back-green",
     name: "Shortflix -Full Stack Netflix Clone",
     description:
@@ -198,6 +206,7 @@ export const projects = [
   },
   {
     iconUrl: summiz,
+    // imgURL: nzbike,
     theme: "btn-back-yellow",
     name: "Touch the Grass Store",
     description:
@@ -214,6 +223,7 @@ export const projects = [
   },
   {
     iconUrl: snapgram,
+    // imgURL: nzbike,
     theme: "btn-back-pink",
     name: "Guess The South America Country",
     description:
@@ -222,6 +232,7 @@ export const projects = [
   },
   {
     iconUrl: estate,
+    // imgURL: nzbike,
     theme: "btn-back-black",
     name: "Ricky Morty App",
     description:
@@ -230,6 +241,7 @@ export const projects = [
   },
   {
     iconUrl: summiz,
+    // imgURL: nzbike,
     theme: "btn-back-yellow",
     name: "TrustBankApp",
     description:
@@ -238,6 +250,7 @@ export const projects = [
   },
   {
     iconUrl: summiz,
+    // imgURL: nzbike,
     theme: "btn-back-yellow",
     name: "Google Clone",
     description:
