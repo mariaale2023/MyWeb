@@ -56,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative flex lg:flex-row flex-col max-container bg-white ">
+    <section className="relative flex lg:flex-row flex-col max-container h-[100vh] ">
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
 
@@ -70,7 +70,7 @@ const Contact = () => {
               type="text"
               name="name"
               className="input"
-              placeholder="Maria"
+              placeholder="Maria Vasquez"
               required
               value={form.name}
               onChange={handleChange}
@@ -96,7 +96,7 @@ const Contact = () => {
             Your Message
             <textarea
               type="text"
-              row={4}
+              rows={8}
               name="message"
               className="input"
               placeholder="How I can help you?"

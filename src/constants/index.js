@@ -199,6 +199,24 @@ export const projects = [
     link: "https://nzbike.co.nz/",
   },
   {
+    iconUrl: snapgram,
+    // imgURL: nzbike,
+    theme: "btn-back-pink",
+    name: "Guess The South America Country",
+    description:
+      "Guess The South America Country is a simple web project that challenges your knowledge about the 12 countries in South America. In this game, you will have three chances to guess the correct country. The project includes three files: index.html, style.css, and script.js. You can check out the live demo of the project.",
+    link: "https://guess-southamerica-country.netlify.app/",
+  },
+  {
+    iconUrl: estate,
+    // imgURL: nzbike,
+    theme: "btn-back-black",
+    name: "Ricky Morty App",
+    description:
+      "The Ricky Morty App is a web application that allows users to explore characters from the popular animated TV show Rick and Morty. Users can view details about each character, search for specific characters, and access a shop for Ricky Morty merchandise. This App is connected with Ricky and Morty API and Higrogen Shopify framework.",
+    link: "https://github.com/mariaale2023/Ricky-Morty-App",
+  },
+  {
     iconUrl: threads,
     // imgURL: nzbike,
     theme: "btn-back-green",
@@ -224,24 +242,7 @@ export const projects = [
       "Designed a Cat-chatbot that help you to alleviate frustration and wasted time searching your misplaced items in your home. This will provide you with step-by-step directions on where to locate the item within the house..",
     link: "https://chatbot-detective-cat.onrender.com/",
   },
-  {
-    iconUrl: snapgram,
-    // imgURL: nzbike,
-    theme: "btn-back-pink",
-    name: "Guess The South America Country",
-    description:
-      "Guess The South America Country is a simple web project that challenges your knowledge about the 12 countries in South America. In this game, you will have three chances to guess the correct country. The project includes three files: index.html, style.css, and script.js. You can check out the live demo of the project.",
-    link: "https://guess-southamerica-country.netlify.app/",
-  },
-  {
-    iconUrl: estate,
-    // imgURL: nzbike,
-    theme: "btn-back-black",
-    name: "Ricky Morty App",
-    description:
-      "The Ricky Morty App is a web application that allows users to explore characters from the popular animated TV show Rick and Morty. Users can view details about each character, search for specific characters, and access a shop for Ricky Morty merchandise. This App is connected with Ricky and Morty API and Higrogen Shopify framework.",
-    link: "https://github.com/mariaale2023/Ricky-Morty-App",
-  },
+
   {
     iconUrl: summiz,
     // imgURL: nzbike,
