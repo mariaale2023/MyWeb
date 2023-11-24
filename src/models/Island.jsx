@@ -14,7 +14,8 @@ import { useFrame, useThree } from "@react-three/fiber";
 // packege that makes enable animation. so "a" is from 'animated'
 import { a } from "@react-spring/three";
 
-import islandScene from "../assets/3d/island.glb";
+import islandScene from "../assets/3d/melies_moon.glb";
+// import islandScene from "../assets/3d/island.glb";
 
 const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   // seRef is a React Hook that provides a way to create a mutable object that persists throughout the lifecycle of a component. manipulate properties of the 3D object represented by the Island component.
@@ -133,7 +134,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   return (
     <a.group {...props} ref={islandRef}>
       {/* <a.group {...props} dispose={null}> */}
-      <mesh
+      {/* <mesh
         geometry={nodes.polySurface944_tree_body_0.geometry}
         material={materials.PaletteMaterial001}
       />
@@ -160,8 +161,29 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
       <mesh
         geometry={nodes.pCube11_rocks1_0.geometry}
         material={materials.PaletteMaterial001}
-      />
+      /> */}
       {/* ------------------ */}
+      <mesh
+        // castShadow
+        // receiveShadow
+        geometry={nodes.ZBrush_defualt_group002_Caps_0.geometry}
+        material={materials.Caps}
+        // scale={100}
+      />
+      <mesh
+        // castShadow
+        // receiveShadow
+        geometry={nodes.Group17809002_Eye_0.geometry}
+        material={materials.material}
+        // scale={100}
+      />
+      <mesh
+        // castShadow
+        // receiveShadow
+        geometry={nodes.Group47082_Moon_0.geometry}
+        material={materials.Moon}
+        // scale={100}
+      />
     </a.group>
   );
 };
