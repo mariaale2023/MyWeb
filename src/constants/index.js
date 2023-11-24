@@ -190,7 +190,7 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: shopify,
+    iconUrl: summiz,
     // imgURL: nzbike,
     theme: "btn-back-red",
     name: "NZBike Store",
@@ -254,7 +254,7 @@ export const projects = [
   {
     iconUrl: summiz,
     // imgURL: nzbike,
-    theme: "btn-back-yellow",
+    theme: "btn-back-pink",
     name: "Google Clone",
     description:
       "Built Google is a clone of Google Search Engine with HTML, CSS and JS.",
