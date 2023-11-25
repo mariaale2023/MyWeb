@@ -3,7 +3,9 @@ import { useRef, useEffect } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
-import birdScene from "../assets/3d/bird.glb";
+// import birdScene from "../assets/3d/bird.glb";
+// import birdScene from "../assets/3d/goofy_green.glb";
+import birdScene from "../assets/3d/donut_cat.glb";
 
 const Bird = () => {
   const birdRef = useRef();
@@ -11,8 +13,14 @@ const Bird = () => {
   const { scene, animations } = useGLTF(birdScene);
   const { actions } = useAnimations(animations, birdRef);
 
+  // useEffect(() => {
+  //   actions["Take 001"].play();
+  // }, []);
+  // useEffect(() => {
+  //   actions["Animation"].play();
+  // }, []);
   useEffect(() => {
-    actions["Take 001"].play();
+    actions["donutAction"].play();
   }, []);
 
   useFrame(({ clock, camera }) => {
@@ -40,9 +48,24 @@ const Bird = () => {
   });
 
   return (
-    <mesh position={[-5, 2, 1]} scale={[0.005, 0.005, 0.005]} ref={birdRef}>
+    //   <mesh position={[-5, 2, 1]} scale={[0.005, 0.005, 0.005]} ref={birdRef}>
+    <mesh
+      position={[-1, -2, 1]}
+      scale={[5, 5, 5]}
+      rotation={[1, 0, 0]}
+      ref={birdRef}
+    >
       <primitive object={scene} />
     </mesh>
+
+    // <mesh
+    //   position={[0, 0, 0]}
+    //   scale={[1, 1, 1]}
+    //   ref={birdRef}
+    //   rotation={[0.5, 30, 0]}
+    // >
+    //   <primitive object={scene} />
+    // </mesh>
   );
 };
 

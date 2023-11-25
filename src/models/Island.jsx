@@ -14,12 +14,14 @@ import { useFrame, useThree } from "@react-three/fiber";
 // packege that makes enable animation. so "a" is from 'animated'
 import { a } from "@react-spring/three";
 
-import islandScene from "../assets/3d/melies_moon.glb";
 // import islandScene from "../assets/3d/island.glb";
+// import islandScene from "../assets/3d/melies_moon.glb";
+import islandScene from "../assets/3d/candy_house.glb";
 
 const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   // seRef is a React Hook that provides a way to create a mutable object that persists throughout the lifecycle of a component. manipulate properties of the 3D object represented by the Island component.
-  const islandRef = useRef();
+  // const islandRef = useRef();
+  const islandRef = useRef(); //para candy house
 
   const { gl, viewport } = useThree();
   const { nodes, materials } = useGLTF(islandScene);
@@ -70,7 +72,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
 
       const delta = (clientX - lastX.current) / viewport.width;
 
-      islandRef.current.rotation.y += delta * 0.01 * Math.PI;
+      islandRef.current.rotation.z += delta * 0.01 * Math.PI;
 
       lastX.current = clientX;
 
@@ -85,9 +87,9 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
       if (Math.abs(rotationSpeed.current) < 0.001) {
         rotationSpeed.current = 0;
       }
-      islandRef.current.rotation.y += rotationSpeed.current;
+      islandRef.current.rotation.z += rotationSpeed.current;
     } else {
-      const rotation = islandRef.current.rotation.y;
+      const rotation = islandRef.current.rotation.z;
 
       //  to normalized the rotation values to snsure it stay within the range [0.2 * Math.PI]
       const normalizedRotation =
@@ -132,6 +134,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   // useGLTF is used to load the 3D model from the specified GLB file
 
   return (
+    // <a.group {...props} ref={islandRef} >
     <a.group {...props} ref={islandRef}>
       {/* <a.group {...props} dispose={null}> */}
       {/* <mesh
@@ -163,26 +166,89 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
         material={materials.PaletteMaterial001}
       /> */}
       {/* ------------------ */}
-      <mesh
-        // castShadow
-        // receiveShadow
+      {/* <mesh
+        //
+        // 
         geometry={nodes.ZBrush_defualt_group002_Caps_0.geometry}
         material={materials.Caps}
         // scale={100}
       />
       <mesh
-        // castShadow
-        // receiveShadow
+        //
+        // 
         geometry={nodes.Group17809002_Eye_0.geometry}
         material={materials.material}
         // scale={100}
       />
       <mesh
-        // castShadow
-        // receiveShadow
+        //
+        // 
         geometry={nodes.Group47082_Moon_0.geometry}
         material={materials.Moon}
         // scale={100}
+      /> */}
+
+      {/* ------------------ */}
+
+      <mesh
+        geometry={nodes.Plane_CandyTex_0.geometry}
+        material={materials.CandyTex}
+      />
+      <mesh
+        geometry={nodes.Plane_CupTex_0.geometry}
+        material={materials.CupTex}
+      />
+      <mesh
+        geometry={nodes.Plane_CubBlue_0.geometry}
+        material={materials.CubBlue}
+      />
+      <mesh
+        geometry={nodes.Plane_Straw_0.geometry}
+        material={materials.Straw}
+      />
+      <mesh geometry={nodes.Plane_Wall_0.geometry} material={materials.Wall} />
+      <mesh geometry={nodes.Plane_Roof_0.geometry} material={materials.Roof} />
+      <mesh geometry={nodes.Plane_Wood_0.geometry} material={materials.Wood} />
+      <mesh
+        geometry={nodes.Plane_WaffleDark_0.geometry}
+        material={materials.WaffleDark}
+      />
+      <mesh
+        geometry={nodes.Plane_CandyTreeSec_0.geometry}
+        material={materials.CandyTreeSec}
+      />
+      <mesh
+        geometry={nodes.Plane_CandyTreePrim_0.geometry}
+        material={materials.CandyTreePrim}
+      />
+      <mesh
+        geometry={nodes.Plane_WindowBase_0.geometry}
+        material={materials.WindowBase}
+      />
+      <mesh
+        geometry={nodes.Plane_WindowDark_0.geometry}
+        material={materials.WindowDark}
+      />
+      <mesh
+        geometry={nodes.Plane_AxeHandle_0.geometry}
+        material={materials.AxeHandle}
+      />
+      <mesh
+        geometry={nodes.Plane_AxeSec_0.geometry}
+        material={materials.AxeSec}
+      />
+      <mesh
+        geometry={nodes.Plane_AxePrim_0.geometry}
+        material={materials.AxePrim}
+      />
+
+      <mesh
+        geometry={nodes.Plane_LollipopHandle_0.geometry}
+        material={materials.LollipopHandle}
+      />
+      <mesh
+        geometry={nodes.Plane_Lollipop_0.geometry}
+        material={materials.Lollipop}
       />
     </a.group>
   );

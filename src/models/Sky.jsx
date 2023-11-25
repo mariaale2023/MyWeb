@@ -3,17 +3,16 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
 import skyScene from "../assets/3d/sky.glb";
-// import skyScene from "../assets/3d/sky_pano_-_milkyway.glb";
-// import skyScene from "../assets/3d/fantasy_sky_background.glb";
 
-const Sky = (isRotating) => {
+const Sky = ({ isRotating }) => {
   // useGLTF is used to load the 3D model from the specified GLB file
   const sky = useGLTF(skyScene);
+
   const skyRef = useRef();
 
   useFrame((_, delta) => {
     if (isRotating) {
-      skyRef.current.rotation.y += 0.05 * delta;
+      skyRef.current.rotation.y += 0.9 * delta;
     }
   });
 

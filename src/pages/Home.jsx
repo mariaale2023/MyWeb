@@ -35,34 +35,39 @@ const Home = () => {
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
     // let screenPosition = [0, -30, -43];
-    let screenPosition = [0, -1.7, -43];
-    let rotation = [-0.3, 0, -0.1];
+    let screenPosition = [0, -5, -43];
+    // let rotation = [-0.3, 0, -0.1]; // for moon
+    let rotation = [5, 0, 1.55]; // for candy house
+    // let rotation = [0, 0, 1.55]; // Adjust this line for horizontal rotation; // for candy house
 
     if (window.innerWidth < 768) {
       screenScale = [15, 15, 15];
     } else {
-      screenScale = [20, 20, 20];
+      screenScale = [27, 27, 27];
     }
     return [screenScale, screenPosition, rotation];
   };
   const adjustPlaneForScreenSize = () => {
     let screenScale, screenPosition;
+    let rotation;
 
-    if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
-      screenPosition = [0, -1.5, 0];
-    } else {
-      screenScale = [3, 3, 3];
-      screenPosition = [0, -3, -3];
-    }
-
+    // ****** THIS FOR THE PLANE WITH ISLAND *********
     // if (window.innerWidth < 768) {
-    //   screenScale = [0.8, 0.8, 0.8];
+    //   screenScale = [1.5, 1.5, 1.5];
     //   screenPosition = [0, -1.5, 0];
     // } else {
-    //   screenScale = [0.1, 0.1, 0.1];
-    //   screenPosition = [0, -5, -5];
+    //   screenScale = [3, 3, 3];
+    //   screenPosition = [0, -3, -3];
     // }
+
+    if (window.innerWidth < 768) {
+      screenScale = [0.0015, 0.0015, 0.0015];
+      screenPosition = [0, -1.7, 0];
+    } else {
+      screenScale = [0.004, 0.004, 0.004];
+      screenPosition = [0, -4.4, -3];
+    }
+
     return [screenScale, screenPosition];
   };
 
@@ -111,7 +116,9 @@ const Home = () => {
             isRotating={isRotating}
             position={planePosition}
             scale={planeScale}
-            rotation={[0, 20, 0]}
+            // rotation={[0, 20, 0]} // for plane
+            // rotation={[0, 6, 0]} // for lien pilot
+            rotation={[0, 1.5, 0]} // for donut cat
             // scale={[1, 1, 1]}
           />
           <Sky isRotating={isRotating} />
