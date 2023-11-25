@@ -4,8 +4,8 @@ import Loder from "../components/Loder";
 
 import CandyHouse from "../models/CandyHouse";
 import Sky from "../models/Sky";
-import Bird from "../models/Bird";
-import Plane from "../models/Plane";
+import Bird from "../models/CatDonut";
+import Cat from "../models/Cat";
 import HomeInfo from "../components/HomeInfo";
 
 import sakura from "../assets/sakura.mp3";
@@ -18,7 +18,7 @@ const Home = () => {
   audioRef.current.loop = true;
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
-  //  For the rotation of the CandyHouse and the Plane
+  //  For the rotation of the CandyHouse and the Cat
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
 
@@ -47,7 +47,7 @@ const Home = () => {
     }
     return [screenScale, screenPosition, rotation];
   };
-  const adjustPlaneForScreenSize = () => {
+  const adjustCatForScreenSize = () => {
     let screenScale, screenPosition;
     let rotation;
 
@@ -62,10 +62,10 @@ const Home = () => {
     return [screenScale, screenPosition];
   };
 
-  const [CandyHouseScale, CandyHousePosition, CandyHouseRotation] =
+  const [candyHouseScale, candyHousePosition, candyHouseRotation] =
     adjustCandyHouseForScreenSize();
 
-  const [planeScale, planePosition] = adjustPlaneForScreenSize();
+  const [catScale, catPosition] = adjustCatForScreenSize();
 
   return (
     <section className="w-full h-screen relative">
@@ -94,17 +94,17 @@ const Home = () => {
           <Bird />
 
           <CandyHouse
-            scale={CandyHouseScale}
-            position={CandyHousePosition}
-            rotation={CandyHouseRotation}
+            scale={candyHouseScale}
+            position={candyHousePosition}
+            rotation={candyHouseRotation}
             isRotating={isRotating}
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
           />
-          <Plane
+          <Cat
             isRotating={isRotating}
-            position={planePosition}
-            scale={planeScale}
+            position={catPosition}
+            scale={catScale}
             rotation={[0, 1.5, 0]}
           />
           <Sky isRotating={isRotating} />

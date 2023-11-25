@@ -1,12 +1,12 @@
 import { useRef, useEffect } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
 
-import planeScene from "../assets/3d/toon_cat_free.glb";
+import catScene from "../assets/3d/toon_cat_free.glb";
 
-const Plane = ({ isRotating, ...props }) => {
-  const planeRef = useRef();
-  const { scene, animations } = useGLTF(planeScene);
-  const { actions } = useAnimations(animations, planeRef);
+const Cat = ({ isRotating, ...props }) => {
+  const catRef = useRef();
+  const { scene, animations } = useGLTF(catScene);
+  const { actions } = useAnimations(animations, catRef);
 
   useEffect(() => {
     if (isRotating) {
@@ -22,15 +22,15 @@ const Plane = ({ isRotating, ...props }) => {
       // isRotating={isRotating}
       // position={position}
       // scale={scale}
-      // ref={planeRef}
+      // ref={catRef}
 
       //----
       {...props}
-      ref={planeRef}
+      ref={catRef}
     >
       <primitive object={scene} />
     </mesh>
   );
 };
 
-export default Plane;
+export default Cat;
