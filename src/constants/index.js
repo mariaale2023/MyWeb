@@ -1,6 +1,7 @@
 import { meta, shopify, starbucks, tesla } from "../assets/images";
 import tef from "../assets/images/tef.png";
-import nzbike from "../assets/images/NZBike_logo.png";
+import nzbikeLogo from "../assets/images/NZBike_logo.png";
+import nzbike from "../assets/projects/nzbike.jpeg";
 import bank from "../assets/images/Logo_BancoEstado.png";
 import university from "../assets/images/university_chile.png";
 import {
@@ -158,7 +159,7 @@ export const experiences = [
     id: "5",
     title: "Shopify Developer and MKT Lead",
     company_name: "NZBike.co.nz",
-    icon: nzbike,
+    icon: nzbikeLogo,
     iconBg: "#f5cac2",
     date: "Ago 2023 - Present",
     points: [
@@ -227,7 +228,7 @@ export const projects = [
   },
   {
     iconUrl: summiz,
-    // imgURL: nzbike,
+    imgURL: nzbike,
     theme: "btn-back-yellow",
     name: "Touch the Grass Store",
     description:
