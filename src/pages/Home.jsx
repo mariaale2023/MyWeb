@@ -2,7 +2,7 @@ import { useState, Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loder from "../components/Loder";
 
-import Island from "../models/Island";
+import CandyHouse from "../models/CandyHouse";
 import Sky from "../models/Sky";
 import Bird from "../models/Bird";
 import Plane from "../models/Plane";
@@ -18,7 +18,7 @@ const Home = () => {
   audioRef.current.loop = true;
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
-  //  For the rotation of the Island and the Plane
+  //  For the rotation of the CandyHouse and the Plane
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
 
@@ -32,7 +32,7 @@ const Home = () => {
     };
   }, [isPlayingMusic]);
 
-  const adjustIslandForScreenSize = () => {
+  const adjustCandyHouseForScreenSize = () => {
     let screenScale = null;
     // let screenPosition = [0, -30, -43];
     let screenPosition = [0, -5, -43];
@@ -51,15 +51,6 @@ const Home = () => {
     let screenScale, screenPosition;
     let rotation;
 
-    // ****** THIS FOR THE PLANE WITH ISLAND *********
-    // if (window.innerWidth < 768) {
-    //   screenScale = [1.5, 1.5, 1.5];
-    //   screenPosition = [0, -1.5, 0];
-    // } else {
-    //   screenScale = [3, 3, 3];
-    //   screenPosition = [0, -3, -3];
-    // }
-
     if (window.innerWidth < 768) {
       screenScale = [0.0015, 0.0015, 0.0015];
       screenPosition = [0, -1.7, 0];
@@ -71,8 +62,8 @@ const Home = () => {
     return [screenScale, screenPosition];
   };
 
-  const [islandScale, islandPosition, islandRotation] =
-    adjustIslandForScreenSize();
+  const [CandyHouseScale, CandyHousePosition, CandyHouseRotation] =
+    adjustCandyHouseForScreenSize();
 
   const [planeScale, planePosition] = adjustPlaneForScreenSize();
 
@@ -97,29 +88,24 @@ const Home = () => {
           <hemisphereLight
             skyColor="#b1e1ff"
             groundcolor="#000000"
-            intensity={0.5}
+            intensity={0.3}
           />
 
           <Bird />
 
-          <Island
-            scale={islandScale}
-            position={islandPosition}
-            rotation={islandRotation}
+          <CandyHouse
+            scale={CandyHouseScale}
+            position={CandyHousePosition}
+            rotation={CandyHouseRotation}
             isRotating={isRotating}
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
-
-            // isSetRotating={isSetRotating}
           />
           <Plane
             isRotating={isRotating}
             position={planePosition}
             scale={planeScale}
-            // rotation={[0, 20, 0]} // for plane
-            // rotation={[0, 6, 0]} // for lien pilot
-            rotation={[0, 1.5, 0]} // for donut cat
-            // scale={[1, 1, 1]}
+            rotation={[0, 1.5, 0]}
           />
           <Sky isRotating={isRotating} />
         </Suspense>
