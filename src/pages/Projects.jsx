@@ -13,7 +13,7 @@ const Projects = () => {
         <div className="text-container">
           <h1 className="head-text">
             My{" "}
-            <span className="blue-gradient_text font-semibold drop-shadow">
+            <span className="pink-gradient_text font-semibold drop-shadow">
               PROJECTS
             </span>
           </h1>
@@ -51,15 +51,15 @@ const Projects = () => {
                       to={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-semibold text-blue-500"
+                      className="font-semibold text-fuchsia-500"
                     >
                       Live Link
                     </Link>
-                    <img
+                    {/* <img
                       src={arrow}
                       alt="arrow"
-                      className="w-4 h-4 object-contain"
-                    />
+                      className="w-4 h-4 object-contain "
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -76,53 +76,3 @@ const Projects = () => {
 export default Projects;
 
 // //-----
-
-// import React, { useState } from "react";
-// import { useSpring, animated } from "react-spring";
-// import { projects }  from "../constants"; // Import the projects array from index.jsx
-
-// const ProjectGallery = () => {
-//   const [selectedProject, setSelectedProject] = useState(null);
-
-//   const projectSpring = useSpring({
-//     opacity: selectedProject ? 1 : 0,
-//     transform: `scale(${selectedProject ? 1 : 0.8})`,
-//   });
-
-//   return (
-//     <div>
-//       <h2 className="subhead-text">Projects</h2>
-//       <div className="mt-16 flex flex-wrap gap-12">
-//         {projects.map((project, index) => (
-//           <div
-//             key={index}
-//             className="block-container w-20 h-20"
-//             onClick={() => setSelectedProject(project)}
-//           >
-//             <div className="btn-back rounded-xl" />
-//             <div className=" btn-front rounded-xl flex justify-center items-center">
-//               <img
-//                 src={project.iconUrl} {/* Assuming iconUrl is the project image URL */}
-//                 alt={project.name}
-//                 className="w-1/2 h-1/2 object-contain"
-//               />
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-
-//       {selectedProject && (
-//         <animated.div style={projectSpring} className="project-info">
-//           <h3>{selectedProject.name}</h3>
-//           <p>{selectedProject.description}</p>
-//           <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
-//             View Project
-//           </a>
-//           <button onClick={() => setSelectedProject(null)}>Close</button>
-//         </animated.div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default About;

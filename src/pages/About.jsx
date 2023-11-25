@@ -70,7 +70,7 @@ const About = () => {
         <div className="text-container">
           <h1 className="head-text">
             Hello, I am{" "}
-            <span className="blue-gradient_text font-semibold drop-shadow">
+            <span className="pink-gradient_text font-semibold drop-shadow">
               MARIA
             </span>
           </h1>
@@ -120,7 +120,7 @@ const About = () => {
       </div>
 
       <div className="work-experience py-16">
-        <h3>Work Experience</h3>
+        <h3 className="subhead-text">Work Experience</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
             I've worked in different projects, leveling up my skills and teaming

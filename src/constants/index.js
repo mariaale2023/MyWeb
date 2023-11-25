@@ -114,7 +114,7 @@ export const experiences = [
     title: "Project Coordinator (Network PILA project)  ",
     company_name: "Intellectual Property Department at University of Chile ",
     icon: university,
-    iconBg: "#accbe1",
+    iconBg: "#ee95b4",
     date: "2010 - 2011",
     points: [
       "Established collaborative network among Latin American universities and IP specialists, conducted national benchmarking, managed budget, and formed partnerships for impactful seminars with 14 Chilean universities and government entities.",
@@ -126,7 +126,7 @@ export const experiences = [
     title: "Project Coordinator ",
     company_name: "National Bank of Chile ",
     icon: bank,
-    iconBg: "#b7e4c7",
+    iconBg: "#ezb294",
     date: "2011 - 2013",
     points: [
       "Lead limited scope projects using  Agile principles with strict timeframes and budget, particularly in commercial platform triggered by legislation changes or commercial requests like modifications and data capture requirements.",
@@ -137,7 +137,7 @@ export const experiences = [
     title: "B2B Sales Digital Services",
     company_name: "Telefonica Company",
     icon: tef,
-    iconBg: "#fbc3bc",
+    iconBg: "#f5c2ed",
     date: "2013 - 2016",
     points: [
       "Collaborated with technology partners to promote digital services, trained sales forces, and collaborated with technology partners and tech teams on custom solutions in Cloud Computing, InfoSec, CCTV, SaaS, and IT Financial Services.",
@@ -148,7 +148,7 @@ export const experiences = [
     title: "Senior IT Sales",
     company_name: "Telefonica Company",
     icon: tef,
-    iconBg: "#b7e4c7",
+    iconBg: "#f5c1d3",
     date: "2016 -  2018",
     points: [
       "Drove sales growth and transformed retail operations in Latin America through customized IT services and collaborations with top brands like SAP, Cisco, HP, Microsoft, Huawei, and other.",
@@ -159,7 +159,7 @@ export const experiences = [
     title: "Shopify Developer and MKT Lead",
     company_name: "NZBike.co.nz",
     icon: nzbike,
-    iconBg: "#a2d2ff",
+    iconBg: "#f5cac2",
     date: "Ago 2023 - Present",
     points: [
       "Design, Strategic planning and implementation eCommerce integrated with 4 supplier for one of the brand of the business.",
