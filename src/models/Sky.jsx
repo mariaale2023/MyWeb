@@ -2,7 +2,7 @@ import { useGLTF } from "@react-three/drei";
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
-import skyScene from "../assets/3d/sky.glb";
+import skyScene from "../assets/3d/skybox_clouds_in_the_sky_spatial_io.glb";
 
 const Sky = ({ isRotating }) => {
   // useGLTF is used to load the 3D model from the specified GLB file

@@ -13,12 +13,7 @@ const Bird = () => {
   const { scene, animations } = useGLTF(birdScene);
   const { actions } = useAnimations(animations, birdRef);
 
-  // useEffect(() => {
-  //   actions["Take 001"].play();
-  // }, []);
-  // useEffect(() => {
-  //   actions["Animation"].play();
-  // }, []);
+  
   useEffect(() => {
     actions["donutAction"].play();
   }, []);
@@ -48,7 +43,7 @@ const Bird = () => {
   });
 
   return (
-    //   <mesh position={[-5, 2, 1]} scale={[0.005, 0.005, 0.005]} ref={birdRef}>
+    
     <mesh
       position={[-1, -2, 1]}
       scale={[5, 5, 5]}
@@ -58,14 +53,7 @@ const Bird = () => {
       <primitive object={scene} />
     </mesh>
 
-    // <mesh
-    //   position={[0, 0, 0]}
-    //   scale={[1, 1, 1]}
-    //   ref={birdRef}
-    //   rotation={[0.5, 30, 0]}
-    // >
-    //   <primitive object={scene} />
-    // </mesh>
+  
   );
 };
 
