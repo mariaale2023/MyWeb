@@ -2,6 +2,14 @@ import { meta, shopify, starbucks, tesla } from "../assets/images";
 import tef from "../assets/images/tef.png";
 import nzbikeLogo from "../assets/images/NZBike_logo.png";
 import nzbike from "../assets/projects/nzbike.jpeg";
+import guess from "../assets/projects/guess_country.jpeg";
+import rickMorty from "../assets/projects/rick_morty.jpeg";
+import shortflix1 from "../assets/projects/shortflix1.jpeg";
+import shortflix2 from "../assets/projects/shortflix2.jpeg";
+import touchGrass from "../assets/projects/touch_grass_store.jpeg";
+import bankTrust from "../assets/projects/bank_trust.jpeg";
+import google from "../assets/projects/google_clone.jpeg";
+import catia from "../assets/projects/cat_bot.jpeg";
 import bank from "../assets/images/Logo_BancoEstado.png";
 import university from "../assets/images/university_chile.png";
 import {
@@ -201,7 +209,7 @@ export const projects = [
   },
   {
     iconUrl: snapgram,
-    imgURL: nzbike,
+    imgURL: guess,
     theme: "btn-back-pink",
     name: "Guess The South America Country",
     description:
@@ -210,7 +218,7 @@ export const projects = [
   },
   {
     iconUrl: estate,
-    imgURL: nzbike,
+    imgURL: rickMorty,
     theme: "btn-back-black",
     name: "Ricky Morty App",
     description:
@@ -219,16 +227,16 @@ export const projects = [
   },
   {
     iconUrl: threads,
-    imgURL: nzbike,
+    imgURL: shortflix1,
     theme: "btn-back-green",
     name: "Shortflix -Full Stack Netflix Clone",
     description:
-      "The Shortflix Blog is a web application that allows users to share and discover information about their favorite movies. Users can create accounts, browse through a collection of movies, read and write reviews, and interact with other movie enthusiasts through comments and likes.",
+      "The Shortflix Blog is a web application that allows users to share and discover information about their favorite short movies or documentaries. Users can create accounts, browse through a collection of movies, read and write reviews, and interact with other movie enthusiasts through comments and likes.",
     link: "https://github.com/mariaale2023/Shortflix",
   },
   {
     iconUrl: summiz,
-    imgURL: nzbike,
+    imgURL: touchGrass,
     theme: "btn-back-yellow",
     name: "Touch the Grass Store",
     description:
@@ -237,7 +245,7 @@ export const projects = [
   },
   {
     iconUrl: car,
-    imgURL: nzbike,
+    imgURL: catia,
     theme: "btn-back-blue",
     name: "Cat-ia Chatbox",
     description:
@@ -247,7 +255,7 @@ export const projects = [
 
   {
     iconUrl: summiz,
-    imgURL: nzbike,
+    imgURL: bankTrust,
     theme: "btn-back-yellow",
     name: "TrustBankApp",
     description:
@@ -256,7 +264,7 @@ export const projects = [
   },
   {
     iconUrl: summiz,
-    imgURL: nzbike,
+    imgURL: google,
     theme: "btn-back-pink",
     name: "Google Clone",
     description:
