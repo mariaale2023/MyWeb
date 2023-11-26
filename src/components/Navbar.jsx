@@ -11,7 +11,7 @@ const Navbar = () => {
       >
         {/* <p className="pink-gradient_text">MV</p> */}
         <div>
-          <img src={MV} />
+          <img src={MV} alt="MV in donut letters" />
         </div>
       </NavLink>
       <nav className="flex gap-7   sm:text-2xl md:text-4xl lg:text-6xl backdrop:font-medium ">
