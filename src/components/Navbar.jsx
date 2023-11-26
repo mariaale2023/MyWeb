@@ -1,17 +1,21 @@
 import { NavLink } from "react-router-dom";
-
+import MV from "../assets/images/MV_icon.png";
 const Navbar = () => {
   return (
     <header className="header">
       <NavLink
         to="/"
         className={
-          "w-10 h-10 bg-white rounded-lg items-center flex justify-center font-bold shadow-md"
+          "w-20 h-20 p-0.5 bg-pink-100 rounded-full items-center flex justify-center font-bold shadow-md"
         }
       >
-        <p className="pink-gradient_text">MV</p>
+        {/* <p className="pink-gradient_text">MV</p> */}
+        <div>
+          <img src={MV} />
+        </div>
       </NavLink>
-      <nav className="flex gap-7 text-xl font-medium ">
+      <nav className="flex gap-7   sm:text-2xl md:text-4xl lg:text-6xl backdrop:font-medium ">
+        {/* <nav className="flex flex-col sm:flex-row gap-7 text-5xl sm:text-xl font-medium"> */}
         <NavLink
           to="/about"
           className={({ isActive }) =>

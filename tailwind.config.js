@@ -15,6 +15,12 @@ export default {
           500: "#2b77e7",
         },
       },
+      screens: {
+        sm: "350px",
+        md: "480px",
+        lg: "768px",
+        xl: "976px",
+      },
       fontFamily: {
         worksans: ["Work Sans", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],

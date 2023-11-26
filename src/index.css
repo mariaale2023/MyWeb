@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -78,6 +79,11 @@ body:has(.card[data-color="green"]:hover) {
   .cta-text {
     @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
   }
+}
+
+/* Style to apply Vina Sans font to the "About" and "Projects" links */
+.header nav a {
+  font-family: "Vina Sans", sans-serif;
 }
 
 .glassmorphism {

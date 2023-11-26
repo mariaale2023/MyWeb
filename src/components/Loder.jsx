@@ -2,16 +2,25 @@
 // https://www.npmjs.com/package/@react-three/drei
 // https://www.npmjs.com/package/@react-three/drei#html
 
+import catDonut from "../assets/images/catdonut_icon.png";
+
 import { Html } from "@react-three/drei";
 
 const Loder = () => {
   return (
     <Html>
-      <div className="flex justify-center items-center">
-        <div className="w-20 h-20 border-2 border-opacity-20 border-blue-500 border-t-blue-500 rounded-full animate-spin">
-          Hello
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+        <div className="flex flex-col justify-center items-center border-2 border-opacity-20 border-pink-500 border-t-pink-500 rounded-full w-40 h-40  animate-spin mx-auto my-auto">
+          <p className="text-pink-800 text-lg">Loading...</p>
+          <img
+            src={catDonut}
+            alt="Cat Donut Icon"
+            className="w-20 h-20 animate-spin mx-auto my-auto"
+          />
         </div>
       </div>
+
+      {/* Adjust the size of the maria image based on the size of the spinning circle */}
     </Html>
   );
 };
