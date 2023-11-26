@@ -192,7 +192,7 @@ export const socialLinks = [
 export const projects = [
   {
     iconUrl: summiz,
-    // imgURL: nzbike,
+    imgURL: nzbike,
     theme: "btn-back-red",
     name: "NZBike Store",
     description:
@@ -201,7 +201,7 @@ export const projects = [
   },
   {
     iconUrl: snapgram,
-    // imgURL: nzbike,
+    imgURL: nzbike,
     theme: "btn-back-pink",
     name: "Guess The South America Country",
     description:
@@ -210,7 +210,7 @@ export const projects = [
   },
   {
     iconUrl: estate,
-    // imgURL: nzbike,
+    imgURL: nzbike,
     theme: "btn-back-black",
     name: "Ricky Morty App",
     description:
@@ -219,7 +219,7 @@ export const projects = [
   },
   {
     iconUrl: threads,
-    // imgURL: nzbike,
+    imgURL: nzbike,
     theme: "btn-back-green",
     name: "Shortflix -Full Stack Netflix Clone",
     description:
@@ -237,6 +237,7 @@ export const projects = [
   },
   {
     iconUrl: car,
+    imgURL: nzbike,
     theme: "btn-back-blue",
     name: "Cat-ia Chatbox",
     description:
@@ -246,7 +247,7 @@ export const projects = [
 
   {
     iconUrl: summiz,
-    // imgURL: nzbike,
+    imgURL: nzbike,
     theme: "btn-back-yellow",
     name: "TrustBankApp",
     description:
@@ -255,7 +256,7 @@ export const projects = [
   },
   {
     iconUrl: summiz,
-    // imgURL: nzbike,
+    imgURL: nzbike,
     theme: "btn-back-pink",
     name: "Google Clone",
     description:
