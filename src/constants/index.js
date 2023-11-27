@@ -13,52 +13,37 @@ import catia from "../assets/projects/cat_bot.jpeg";
 import bank from "../assets/images/Logo_BancoEstado.png";
 import university from "../assets/images/university_chile.png";
 import {
-  car,
   contact,
   css,
-  estate,
   express,
-  git,
   github,
   html,
   javascript,
+  jest,
   linkedin,
   mongodb,
-  motion,
-  mui,
-  nextjs,
+  bootstrap,
+  postgresql,
   nodejs,
-  pricewise,
   react,
-  redux,
-  sass,
-  snapgram,
-  summiz,
   tailwindcss,
-  threads,
-  typescript,
+  vite,
+  docker,
+  python,
+  aws,
+  swagger,
 } from "../assets/icons";
 
 export const skills = [
   {
-    imageUrl: css,
-    name: "CSS",
+    imageUrl: javascript,
+    name: "JavaScript",
     type: "Frontend",
   },
   {
-    imageUrl: express,
-    name: "Express",
-    type: "Backend",
-  },
-  {
-    imageUrl: git,
-    name: "Git",
-    type: "Version Control",
-  },
-  {
-    imageUrl: github,
-    name: "GitHub",
-    type: "Version Control",
+    imageUrl: python,
+    name: "Phyton",
+    type: "Frontend",
   },
   {
     imageUrl: html,
@@ -66,34 +51,9 @@ export const skills = [
     type: "Frontend",
   },
   {
-    imageUrl: javascript,
-    name: "JavaScript",
+    imageUrl: css,
+    name: "CSS",
     type: "Frontend",
-  },
-  {
-    imageUrl: mongodb,
-    name: "MongoDB",
-    type: "Database",
-  },
-  {
-    imageUrl: motion,
-    name: "Motion",
-    type: "Animation",
-  },
-  {
-    imageUrl: mui,
-    name: "Material-UI",
-    type: "Frontend",
-  },
-  {
-    imageUrl: nextjs,
-    name: "Next.js",
-    type: "Frontend",
-  },
-  {
-    imageUrl: nodejs,
-    name: "Node.js",
-    type: "Backend",
   },
   {
     imageUrl: react,
@@ -101,19 +61,66 @@ export const skills = [
     type: "Frontend",
   },
   {
-    imageUrl: redux,
-    name: "Redux",
-    type: "State Management",
+    imageUrl: vite,
+    name: "Vite",
+    type: "Frontend",
   },
   {
-    imageUrl: sass,
-    name: "Sass",
+    imageUrl: bootstrap,
+    name: "bootstrap",
     type: "Frontend",
   },
   {
     imageUrl: tailwindcss,
     name: "Tailwind CSS",
     type: "Frontend",
+  },
+
+  {
+    imageUrl: docker,
+    name: "DOCKER",
+    type: "Backend",
+  },
+  {
+    imageUrl: express,
+    name: "Express",
+    type: "Backend",
+  },
+  {
+    imageUrl: jest,
+    name: "Jest",
+    type: "Testing",
+  },
+  {
+    imageUrl: aws,
+    name: "AWS",
+    type: "Hosting",
+  },
+  {
+    imageUrl: github,
+    name: "GitHub",
+    type: "Version Control",
+  },
+  {
+    imageUrl: mongodb,
+    name: "MongoDB",
+    type: "Database",
+  },
+  {
+    imageUrl: postgresql,
+    name: "PostgreSQL",
+    type: "Database",
+  },
+  {
+    imageUrl: nodejs,
+    name: "Node.js",
+    type: "Backend",
+  },
+
+  {
+    imageUrl: swagger,
+    name: "Swagger API",
+    type: "OpenAPI",
   },
 ];
 
@@ -199,7 +206,6 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: summiz,
     imgURL: nzbike,
     theme: "btn-back-red",
     name: "NZBike Store",
@@ -208,7 +214,6 @@ export const projects = [
     link: "https://nzbike.co.nz/",
   },
   {
-    iconUrl: snapgram,
     imgURL: guess,
     theme: "btn-back-pink",
     name: "Guess The South America Country",
@@ -217,7 +222,6 @@ export const projects = [
     link: "https://guess-southamerica-country.netlify.app/",
   },
   {
-    iconUrl: estate,
     imgURL: rickMorty,
     theme: "btn-back-black",
     name: "Ricky Morty App",
@@ -226,7 +230,6 @@ export const projects = [
     link: "https://github.com/mariaale2023/Ricky-Morty-App",
   },
   {
-    iconUrl: threads,
     imgURL: shortflix1,
     theme: "btn-back-green",
     name: "Shortflix -Full Stack Netflix Clone",
@@ -235,7 +238,7 @@ export const projects = [
     link: "https://github.com/mariaale2023/Shortflix",
   },
   {
-    iconUrl: summiz,
+    iconUrl: "",
     imgURL: touchGrass,
     theme: "btn-back-yellow",
     name: "Touch the Grass Store",
@@ -244,7 +247,6 @@ export const projects = [
     link: "https://touchthegrass.onrender.com/",
   },
   {
-    iconUrl: car,
     imgURL: catia,
     theme: "btn-back-blue",
     name: "Cat-ia Chatbox",
@@ -254,7 +256,6 @@ export const projects = [
   },
 
   {
-    iconUrl: summiz,
     imgURL: bankTrust,
     theme: "btn-back-yellow",
     name: "TrustBankApp",
@@ -263,7 +264,6 @@ export const projects = [
     link: "https://github.com/mariaale2023/TrustBankApp",
   },
   {
-    iconUrl: summiz,
     imgURL: google,
     theme: "btn-back-pink",
     name: "Google Clone",
