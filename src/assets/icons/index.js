@@ -1,7 +1,9 @@
 import css from "./css.svg";
 import express from "./express.svg";
 import aws from "./aws-logo.svg";
+import email from "./email.png";
 import github from "./github.svg";
+import github_pink from "./github_pink.png";
 import html from "./html.svg";
 import javascript from "./javascript.svg";
 import mongodb from "./mongodb.svg";
@@ -14,9 +16,8 @@ import jest from "./jest.svg";
 
 import tailwindcss from "./tailwindcss.svg";
 import swagger from "./swagger.png";
-import linkedin from "./linkedin.svg";
+import linkedin from "./linkedin.png";
 import twitter from "./twitter.svg";
-
 import threads from "./threads.svg";
 import arrow from "./arrow.svg";
 import contact from "./contact.svg";
@@ -30,8 +31,10 @@ export {
   aws,
   css,
   express,
+  email,
   docker,
   github,
+  github_pink,
   html,
   javascript,
   mongodb,

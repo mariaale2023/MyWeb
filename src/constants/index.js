@@ -16,7 +16,9 @@ import {
   contact,
   css,
   express,
+  email,
   github,
+  github_pink,
   html,
   javascript,
   jest,
@@ -188,19 +190,19 @@ export const experiences = [
 
 export const socialLinks = [
   {
-    name: "Contact",
-    iconUrl: contact,
-    link: "/contact",
-  },
-  {
     name: "GitHub",
-    iconUrl: github,
+    iconUrl: github_pink,
     link: "https://github.com/mariaale2023",
   },
   {
     name: "LinkedIn",
     iconUrl: linkedin,
     link: "https://www.linkedin.com/in/maria-vasquez-nz/",
+  },
+  {
+    name: "Email",
+    iconUrl: email,
+    link: "/contact",
   },
 ];
 
