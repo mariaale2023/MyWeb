@@ -94,7 +94,6 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-        <p className="text-pink-400 font-medium">info@hellomaria.dev</p>
       </nav>
     </header>
   );
