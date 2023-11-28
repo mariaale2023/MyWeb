@@ -6,6 +6,7 @@ const Contact = () => {
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -16,17 +17,6 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    /*emailjs.send('<YOUR_SERVICE_ID>','<YOUR_TEMPLATE_ID>', templateParams, '<YOUR_PUBLIC_KEY>')
- 	    .then((response) => {
-     console.log('SUCCESS!', response.status, response.text);
-      }, (err) => {
-     console.log('FAILED...', err);
-    }); */
-
-    // console.log(import.meta.env.VITE_APP_EMAILJS_SERVICE_ID);
-    // console.log(import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID);
-    // console.log(import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY);
-    // console.log("Form Values:", form);
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -43,10 +33,16 @@ const Contact = () => {
       )
       .then(() => {
         setIsLoading(false);
+        setShowSuccessMessage(true);
 
         // TODO: Show success message
         // TODO: Hide an alert
         setForm({ name: "", email: "", message: "" });
+
+        // Hide success message after a few seconds (adjust as needed)
+        setTimeout(() => {
+          setShowSuccessMessage(false);
+        }, 3000);
       })
       .catch((error) => {
         setIsLoading(false);
@@ -59,6 +55,12 @@ const Contact = () => {
     <section className="relative flex lg:flex-row flex-col max-container h-[100vh] ">
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
+
+        {showSuccessMessage && (
+          <div className="text-green-500 mt-4">
+            Your message has been sent successfully!
+          </div>
+        )}
 
         <form
           className="w-full flex flex-col gap-7 mt-14"
