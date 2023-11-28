@@ -8,12 +8,12 @@ import Bird from "../models/CatDonut";
 import Cat from "../models/Cat";
 import HomeInfo from "../components/HomeInfo";
 
-import sakura from "../assets/sakura.mp3";
+import cat_purr from "../assets/Cat-meow-and-purr-sound-effect.mp3";
 import { soundoff, soundon } from "../assets/icons";
 
 const Home = () => {
   // Set up Audio
-  const audioRef = useRef(new Audio(sakura));
+  const audioRef = useRef(new Audio(cat_purr));
   audioRef.current.volume = 0.4;
   audioRef.current.loop = true;
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);

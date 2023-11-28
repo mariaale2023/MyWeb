@@ -73,4 +73,6 @@ Special thanks to the following Sketchfab users for providing incredible 3D asse
 
 This project is also inspired by [Joshua's World](https://www.joshuas.world) and was developed following the tutorial by [Emilian Kasemi](https://www.youtube.com/watch?v=mJRuHhKJ2cs&t=1208s).
 
+Also thanks to [Orange Free Sounds](https://orangefreesounds.com/)- Stock audio , to provide the Cat Meow And Purr Sound Effect.
+
 Thank you to these creators for their contributions!
