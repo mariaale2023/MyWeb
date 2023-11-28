@@ -27,20 +27,13 @@ const Projects = () => {
               world of possibilities in each project.
             </p>
           </div>
-          <div className="flex flex-wrap my-20 gap-16">
+          <div className="box-project flex flex-wrap my-20 gap-16 md:grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-10 ">
             {projects.map((project) => (
-              <div className="lg:w-[400px] w-full" key={project.name}>
-                {/* <div className={`block-container w-12 h-12 box-icon-project`}>
-                  <div className={`btn-back rounded-xl ${project.theme}`} />
-                  <div className="btn-front rounded-xl flex justify-center items-center">
-                    <img
-                      src={project.iconUrl}
-                      alt={project.name}
-                      className="w-1/2 h-1/2 object-contain"
-                    />
-                  </div>
-                </div> */}
-
+              <div
+                className="w-full"
+                // md:w-[300px]
+                key={project.name}
+              >
                 <div>
                   <img
                     src={project.imgURL}
