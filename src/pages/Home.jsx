@@ -82,7 +82,7 @@ const Home = () => {
         <Suspense> lets you display a fallback until its children have finished loading.*/}
         <Suspense fallback={<Loder />}>
           <directionalLight position={[1, 1, 1]} intensity={2} />
-          <ambientLight intensity={0.5} />
+          <ambientLight intensity={0.9} />
           {/* <pointLight /> */}
           {/* <spotLight /> */}
           <hemisphereLight
