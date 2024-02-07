@@ -13,7 +13,7 @@ import shopify from "./shopify.svg";
 import nodejs from "./nodejs.svg";
 import react from "./react.svg";
 import jest from "./jest.svg";
-
+import handMove from "./hand_icon_move_white.png";
 import tailwindcss from "./tailwindcss.svg";
 import swagger from "./swagger.png";
 import linkedin from "./linkedin.png";
@@ -35,6 +35,7 @@ export {
   docker,
   github,
   github_pink,
+  handMove,
   html,
   javascript,
   mongodb,

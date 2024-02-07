@@ -9,7 +9,8 @@ import Cat from "../models/Cat";
 import HomeInfo from "../components/HomeInfo";
 
 import cat_purr from "../assets/Cat-meow-and-purr-sound-effect.mp3";
-import { soundoff, soundon } from "../assets/icons";
+import { handMove, soundoff, soundon } from "../assets/icons";
+import "../assets/icons/index";
 
 const Home = () => {
   // Set up Audio
@@ -21,6 +22,7 @@ const Home = () => {
   //  For the rotation of the CandyHouse and the Cat
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (isPlayingMusic) {
@@ -31,6 +33,18 @@ const Home = () => {
       audioRef.current.pause();
     };
   }, [isPlayingMusic]);
+
+  useEffect(() => {
+    const handleCanvasClick = () => {
+      setLoading(false);
+    };
+
+    window.addEventListener("click", handleCanvasClick);
+
+    return () => {
+      window.removeEventListener("click", handleCanvasClick);
+    };
+  }, []);
 
   const adjustCandyHouseForScreenSize = () => {
     let screenScale = null;
@@ -110,6 +124,19 @@ const Home = () => {
           <Sky isRotating={isRotating} />
         </Suspense>
       </Canvas>
+
+      {loading && (
+        <div
+          className="loading-icon-container absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2"
+          style={{ display: loading ? "block" : "none" }}
+        >
+          <img
+            src={handMove}
+            alt="hand drag icon"
+            className="hand-icon cursor-pointer object-contain w-20 h-20"
+          />
+        </div>
+      )}
 
       <div className="absolute bottom-2 left-2 ">
         <img
