@@ -10,12 +10,12 @@ const Loder = () => {
   return (
     <Html>
       <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-        <div className="flex flex-col justify-center items-center border-2 border-opacity-20 border-pink-500 border-t-pink-500 rounded-full w-40 h-40  animate-spin mx-auto my-auto">
+        <div className="flex flex-col justify-center items-center  rounded-full w-50 h-50  animate-spin mx-auto my-auto">
           <p className="text-pink-800 text-5xl">Loading...</p>
           <img
             src={catDonut}
             alt="Cat Donut Icon"
-            className="w-20 h-20 animate-spin mx-auto my-auto"
+            className="w-30 h-30  mx-auto my-auto"
           />
         </div>
       </div>
