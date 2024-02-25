@@ -13,8 +13,8 @@ import cat_purr from "../assets/Cat-meow-and-purr-sound-effect.mp3";
 import { handMove, soundoff, soundon } from "../assets/icons";
 import "../assets/icons/index";
 
-// const Home = () => {
-  const Home = ({ setIsLoading }) => {
+const Home = () => {
+  // const Home = ({ setIsLoading }) => {
   // Set up Audio
   const audioRef = useRef(new Audio(cat_purr));
   audioRef.current.volume = 0.4;
@@ -26,9 +26,9 @@ import "../assets/icons/index";
   const [currentStage, setCurrentStage] = useState(1);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
+  // useEffect(() => {
+  //   setIsLoading(false);
+  // }, []);
 
   useEffect(() => {
     if (isPlayingMusic) {
@@ -89,12 +89,6 @@ import "../assets/icons/index";
 
   return (
     <section className=" w-full h-screen relative bg-gradient-to-r from-cyan-500 to-red-100 ">
-      {!loading && (
-        <div className=" mt-14 absolute top-28 left-0 right-0 z-10 flex justify-center items-center">
-          {currentStage && <HomeInfo currentStage={currentStage} />}
-        </div>
-      )}
-
       <Canvas
         className={`w-full h-screen bg-transparent ${
           isRotating ? "cursor-grabbing" : "cursor-grab"
@@ -143,6 +137,12 @@ import "../assets/icons/index";
             alt="hand drag icon"
             className="hand-icon cursor-pointer object-contain w-20 h-20"
           />
+        </div>
+      )}
+
+      {!loading && (
+        <div className=" mt-14 absolute top-28 left-0 right-0 z-10 flex justify-center items-center">
+          {currentStage && <HomeInfo currentStage={currentStage} />}
         </div>
       )}
 

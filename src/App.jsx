@@ -13,7 +13,8 @@ const App = () => {
   return (
     <main className="bg-slate-300/20 h-full">
       <Router>
-        {!isLoading && <Navbar />}
+        {/* {!isLoading && <Navbar />} */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home setIsLoading={setIsLoading} />} />
           <Route path="/about" element={<About />} />

@@ -111,7 +111,7 @@ const Contact = () => {
           </label>
           <button
             type="submit"
-            className="btn"
+            className="btn mb-20"
             onFocus={handleFocus}
             onBlur={handleBlur}
           >

@@ -11,7 +11,7 @@ const Loder = () => {
     <Html>
       <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
         <div className="flex flex-col justify-center items-center border-2 border-opacity-20 border-pink-500 border-t-pink-500 rounded-full w-40 h-40  animate-spin mx-auto my-auto">
-          <p className="text-pink-800 text-lg">Loading...</p>
+          <p className="text-pink-800 text-5xl">Loading...</p>
           <img
             src={catDonut}
             alt="Cat Donut Icon"
