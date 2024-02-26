@@ -14,7 +14,7 @@ import CTA from "../components/CTA";
 const ExperienceTimeline = () => {
   return (
     <VerticalTimeline>
-      {experiences.map((experience, index) => (
+      {experiences.reverse().map((experience, index) => (
         <VerticalTimelineElement
           key={experience.id}
           className="vertical-timeline-element"

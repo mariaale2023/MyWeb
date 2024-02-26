@@ -1,5 +1,9 @@
 import { meta, shopify, starbucks, tesla } from "../assets/images";
 import tef from "../assets/images/tef.png";
+import azure from "../assets/images/Azure.png";
+import azdevops from "../assets/images/azure-devops.png";
+import terraform from "../assets/images/Terraform2.png";
+import ccl from "../assets/images/ccl.png";
 import nzbikeLogo from "../assets/images/NZBike_logo.png";
 import nzbike from "../assets/projects/nzbike.jpeg";
 import guess from "../assets/projects/guess_country.jpeg";
@@ -38,10 +42,26 @@ import {
 
 export const skills = [
   {
+    imageUrl: azure,
+    name: "Azure",
+    type: "Cloud",
+  },
+  {
+    imageUrl: azdevops,
+    name: "AzDevOps",
+    type: "Cloud",
+  },
+  {
+    imageUrl: terraform,
+    name: "Terraform",
+    type: "Cloud",
+  },
+  {
     imageUrl: javascript,
     name: "JavaScript",
     type: "Frontend",
   },
+
   {
     imageUrl: python,
     name: "Phyton",
@@ -174,16 +194,27 @@ export const experiences = [
   },
   {
     id: "5",
-    title: "Shopify Developer and MKT Lead",
+    title: "E-Commerce Developer and Digital Marketing Lead",
     company_name: "NZBike.co.nz",
     icon: nzbikeLogo,
     iconBg: "#f5cac2",
     date: "Ago 2023 - Present",
     points: [
-      "Design, Strategic planning and implementation eCommerce integrated with 4 supplier for one of the brand of the business.",
-      "Ensure smooth connection with the Shopify Apps, Marketing Tools, and Platform APIs.",
-      "Modify and update current sites to incorporate new features and enhance UI/UX design",
-      "Developing, monitoring, writing and updating content contained on eCommerce websites and social media.",
+      "Designed and deployed a robust e-commerce platform, integrating with multiple suppliers for seamless drop shipping",
+      "Managing online store operations, content development across channels, and enhanced SEO strategy.",
+      "Implemented hardware solutions for the physical store (point of sale), aligning with future-proofed technology",
+    ],
+  },
+  {
+    id: "6",
+    title: "Software Developer Intern",
+    company_name: "Computing Concepts Lt (CCL)",
+    icon: ccl,
+    iconBg: "#00000",
+    date: "Jan 20024 - Feb 2024",
+    points: [
+      "Create an OpenAI stack on Azure Landing Zone using Terraform, optimized for scalable deployment and managed through Azure DevOps backlog",
+      "Gaining holistic learning experience across different company departments (Azure, Technical Consultancy and Cyber-Security), contributing to a better understanding of comprehensive IT operations",
     ],
   },
 ];
