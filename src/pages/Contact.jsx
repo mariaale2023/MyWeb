@@ -35,8 +35,6 @@ const Contact = () => {
         setIsLoading(false);
         setShowSuccessMessage(true);
 
-        // TODO: Show success message
-        // TODO: Hide an alert
         setForm({ name: "", email: "", message: "" });
 
         // Hide success message after a few seconds (adjust as needed)

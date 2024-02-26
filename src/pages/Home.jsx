@@ -2,7 +2,6 @@ import { useState, Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loder from "../components/Loder";
 
-// import Navbar from "../components/Navbar";
 import CandyHouse from "../models/CandyHouse";
 import Sky from "../models/Sky";
 import Bird from "../models/CatDonut";
@@ -14,7 +13,6 @@ import { handMove, soundoff, soundon } from "../assets/icons";
 import "../assets/icons/index";
 
 const Home = () => {
-  // const Home = ({ setIsLoading }) => {
   // Set up Audio
   const audioRef = useRef(new Audio(cat_purr));
   audioRef.current.volume = 0.4;
@@ -25,10 +23,6 @@ const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
   const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   setIsLoading(false);
-  // }, []);
 
   useEffect(() => {
     if (isPlayingMusic) {
@@ -106,7 +100,7 @@ const Home = () => {
             groundcolor="#000000"
             intensity={0.3}
           />
-          {/* <Navbar /> */}
+
           <Bird />
 
           <CandyHouse

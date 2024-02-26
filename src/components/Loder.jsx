@@ -19,8 +19,6 @@ const Loder = () => {
           />
         </div>
       </div>
-
-      {/* Adjust the size of the maria image based on the size of the spinning circle */}
     </Html>
   );
 };
