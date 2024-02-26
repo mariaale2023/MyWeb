@@ -164,7 +164,7 @@ export const experiences = [
     title: "Project Coordinator ",
     company_name: "National Bank of Chile ",
     icon: bank,
-    iconBg: "#ezb294",
+    iconBg: "#ffffff",
     date: "2011 - 2013",
     points: [
       "Lead limited scope projects using  Agile principles with strict timeframes and budget, particularly in commercial platform triggered by legislation changes or commercial requests like modifications and data capture requirements.",
@@ -210,7 +210,7 @@ export const experiences = [
     title: "Software Developer Intern",
     company_name: "Computing Concepts Lt (CCL)",
     icon: ccl,
-    iconBg: "#00000",
+    iconBg: "#ffffff",
     date: "Jan 20024 - Feb 2024",
     points: [
       "Create an OpenAI stack on Azure Landing Zone using Terraform, optimized for scalable deployment and managed through Azure DevOps backlog",

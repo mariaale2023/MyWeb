@@ -76,7 +76,7 @@ const About = () => {
           </h1>
           <div className="mt-5 flex flex-col gap-3 text-slate-500">
             <p>
-              As a passionate Front-end Developer originally from Chile and
+              As a passionate Software Developer originally from Chile and
               currently based in the beautiful landscapes of New Zealand, I
               bring over 8 years of expertise in business and project management
               to the world of web development.
@@ -85,14 +85,16 @@ const About = () => {
             <p>
               My journey in the tech industry has equipped me with the skills to
               assist businesses in initiating and expanding their digital
-              presence. I thrive on turning ideas into captivating and
-              functional products that leave a lasting impact.
+              presence and to lead tech projects from the beginning to the end.
+              I thrive on turning ideas into captivating and functional products
+              that leave a lasting impact.
             </p>
             <br />
             <p>
               Beyond coding, I enjoy exploring the latest trends in design and
-              technology, always eager to learn and implement innovative
-              solutions. Let's collaborate and bring your projects to life!
+              technology and cloud services, always eager to learn and implement
+              innovative solutions. Let's collaborate and bring your projects to
+              life!
             </p>
           </div>
           <div className="photo-container p-6 flex justify-center">
