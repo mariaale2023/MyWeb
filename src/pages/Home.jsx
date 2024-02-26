@@ -140,7 +140,7 @@ const Home = () => {
         </div>
       )}
 
-      <div className="absolute bottom-2 left-2 ">
+      <div className="absolute bottom-16 left-8 ">
         <img
           src={!isPlayingMusic ? soundoff : soundon}
           alt="sound"
