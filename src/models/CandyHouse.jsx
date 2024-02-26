@@ -22,7 +22,7 @@ const CandyHouse = ({
   ...props
 }) => {
   // seRef is a React Hook that provides a way to create a mutable object that persists throughout the lifecycle of a component. manipulate properties of the 3D object represented by the CandyHouse component.
-  // const CandyHouseRef = useRef();
+
   const CandyHouseRef = useRef(); //para candy house
 
   const { gl, viewport } = useThree();
